@@ -62,7 +62,31 @@
         td {
             background-color: #fff;
         }
+        h1,h2, .curr_date {
+            color: white;
+            margin: 0px;
+        }
+        .curr_date {
+            color: #ffe808;
+        }
     </style>
+    <script type="text/javascript">
+        var serverTime = new Date();
+        var clientTime = new Date();
+        var Diff = serverTime.getTime() - clientTime.getTime();	
+        function displayServerTime(){
+            var clientTime = new Date();
+            var time = new Date(clientTime.getTime() + Diff);
+            var year = time.getFullYear();
+            var month = time.getMonth() + 1; // Months are zero-based, so add 1
+            var day = time.getDate();
+        
+            var dayarray = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+            var montharray = ["Jan","Feb","Mar","April","May","Juni","Juli","Agustus","Sept","Okt","Nov","Des"];
+        
+            document.getElementById("curr_date").innerHTML = "Hari " + dayarray[time.getDay()] + ", " + day + " " + montharray[month - 1] + " " + year;
+        }        
+    </script>
 </head>
 <body>
     <header>
@@ -74,6 +98,8 @@
         <a href="#table3">PREDIKSI SGP</a>
         <a href="#table4">PREDIKSI TTM</a>
     </nav>
+    <h2 style="margin-top: 15px;">PREDIKSI NOBU99</h2>
+    <div class="curr_date" id="curr_date" style="text-align: center"></div>
     <table id="table1">
         <tr><th colspan="2">🇭🇰 PREDIKSI HK </th></tr>
         <tr><td>BB 5</td><td id="bb5-1"></td></tr>
