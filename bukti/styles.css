@@ -7,14 +7,16 @@ body {
 }
 
 header, footer {
-    background: linear-gradient(to bottom,#f1dc17 0%,#ffa800 100%);
+    background: #d59618;
     color: white;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+header img {
+    width: 200px;
+}
 main {
     padding: 10px;
     background-color: #d8d8d8;
