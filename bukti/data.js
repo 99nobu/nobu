@@ -1,7 +1,7 @@
 const items = [
 
     {
-        img: 'https://i.postimg.cc/wvdK9wxL/prag.webp',
+        img: '/img/logo.jpg',
         title: 'Olympus 1000',
         table: [['Tanggal', '05-08-2024'], ['Modal', 'Rp 25.000'], ['WD', 'Rp 2.500.000']]
     },
