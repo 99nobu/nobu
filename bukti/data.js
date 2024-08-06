@@ -1,7 +1,7 @@
 const items = [
 
     {
-        img: '/bukti/img/BUKTI JEPE (1).webp',
+        img: '/bukti/img/BUKTI JEPE (5).webp',
         title: 'Olympus 1000',
         table: [['Tanggal', '03-08-2024'], ['Modal', 'Rp 25.000'], ['WD', 'Rp 1.400.000']]
     },
@@ -11,23 +11,23 @@ const items = [
         table: [['Tanggal', '03-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '13.000.000']]
     },
     {
-        img: 'https://i.ibb.co/z4mNRb6/wikaa.webp',
-        title: 'Item 2',
-        table: [['Row 1 Col 1', 'Row 1 Col 2'], ['Row 2 Col 1', 'Row 2 Col 2'], ['Row 3 Col 1', 'Row 3 Col 2']]
+        img: 'bukti/img/BUKTI JEPE .webp',
+        title: 'Mahjong Ways',
+        table: [['Tanggal', '05-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '8.000.000']]
     },
     {
-        img: 'https://i.ibb.co/z4mNRb6/wikaa.webp',
-        title: 'Item 2',
-        table: [['Row 1 Col 1', 'Row 1 Col 2'], ['Row 2 Col 1', 'Row 2 Col 2'], ['Row 3 Col 1', 'Row 3 Col 2']]
+        img: 'bukti/img/BUKTI JEPE .webp',
+        title: 'Lucky Neko',
+        table: [['Tanggal', '05-08-2024'], ['Modal', 'Rp 50.000'], ['WD', '2.951.000']]
     },
     {
-        img: 'https://i.ibb.co/z4mNRb6/wikaa.webp',
-        title: 'Item 2',
-        table: [['Row 1 Col 1', 'Row 1 Col 2'], ['Row 2 Col 1', 'Row 2 Col 2'], ['Row 3 Col 1', 'Row 3 Col 2']]
+        img: 'bukti/img/BUKTI JEPE (3).webp',
+        title: 'Mahjong Ways',
+        table: [['Tanggal', '05-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '8.000.000']]
     },
     {
-        img: 'https://i.ibb.co/z4mNRb6/wikaa.webp',
-        title: 'Item 2',
-        table: [['Row 1 Col 1', 'Row 1 Col 2'], ['Row 2 Col 1', 'Row 2 Col 2'], ['Row 3 Col 1', 'Row 3 Col 2']]
+        img: 'bukti/img/BUKTI JEPE (4).webp',
+        title: 'Mahjong Ways 2',
+        table: [['Tanggal', '06-08-2024'], ['Modal', 'Rp 30.000'], ['WD', '1.000.000']]
     },
 ];
