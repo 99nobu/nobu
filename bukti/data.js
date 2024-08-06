@@ -11,7 +11,7 @@ const items = [
         table: [['Tanggal', '03-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '13.000.000']]
     },
     {
-        img: '/bukti/img/BUKTI JEPE .webp',
+        img: '/bukti/img/BUKTI JEPE.webp',
         title: 'Mahjong Ways',
         table: [['Tanggal', '05-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '8.000.000']]
     },
