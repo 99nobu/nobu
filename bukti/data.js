@@ -16,14 +16,9 @@ const items = [
         table: [['Tanggal', '05-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '8.000.000']]
     },
     {
-        img: '/bukti/img/BUKTI JEPE .webp',
+        img: '/bukti/img/BUKTI JEPE (3).webp',
         title: 'Lucky Neko',
         table: [['Tanggal', '05-08-2024'], ['Modal', 'Rp 50.000'], ['WD', '2.951.000']]
-    },
-    {
-        img: '/bukti/img/BUKTI JEPE (3).webp',
-        title: 'Mahjong Ways',
-        table: [['Tanggal', '05-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '8.000.000']]
     },
     {
         img: '/bukti/img/BUKTI JEPE (4).webp',
