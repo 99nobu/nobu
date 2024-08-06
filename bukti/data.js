@@ -1,9 +1,9 @@
 const items = [
 
     {
-        img: '/bukti/img/logo.jpg',
+        img: '/bukti/img/BUKTI JEPE (1).webp',
         title: 'Olympus 1000',
-        table: [['Tanggal', '05-08-2024'], ['Modal', 'Rp 25.000'], ['WD', 'Rp 2.500.000']]
+        table: [['Tanggal', '03-08-2024'], ['Modal', 'Rp 25.000'], ['WD', 'Rp 1.400.000']]
     },
     {
         img: 'https://wikagrup.com/wp-content/uploads/2024/07/BUKTI-JEPE-1024x1024.png',
