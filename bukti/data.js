@@ -1,42 +1,42 @@
 const items = [
 
     {
-        img: '/bukti/img/tgl10bln1.webp',
+        img: '/bukti/img/tgl10bln1.png',
         title: 'Olympus 1000',
         table: [['Tanggal', '10-01-2024'], ['Modal', 'Rp 40.000'], ['WD', 'Rp 3.000.000']]
     },
     {
-        img: '/bukti/img/tgl7bln3.webp',
+        img: '/bukti/img/tgl7bln3.png',
         title: 'Starlight Princess',
         table: [['Tanggal', '07-03-2024'], ['Modal', 'Rp 50.000'], ['WD', 'Rp 3.000.000']]
     },
     {
-        img: '/bukti/img/tgl0bln3.webp',
+        img: '/bukti/img/tgl0bln3.png',
         title: 'SINGAPORE',
         table: [['Tanggal', '10-03-2024'], ['Modal', 'Rp 20.000'], ['WD', 'Rp 13.000.000']]
     },
     {
-        img: '/bukti/img/tgl11bln3.webp',
+        img: '/bukti/img/tgl11bln3.png',
         title: 'Gates of Olympus',
         table: [['Tanggal', '11-03-2024'], ['Modal', 'Rp 70.000'], ['WD', 'Rp 5.550.000']]
     },
     {
-        img: '/bukti/img/tgl9bln3.webp',
+        img: '/bukti/img/tgl9bln3.png',
         title: 'Sugar Rush 1000',
         table: [['Tanggal', '19-03-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 7.500.000']]
     },
     {
-        img: '/bukti/img/tgl1bln4.webp',
+        img: '/bukti/img/tgl1bln4.png',
         title: 'Gates of Olympus 1000',
         table: [['Tanggal', '01-04-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 5.950.000']]
     },
     {
-        img: '/bukti/img/tgl5bln5.webp',
+        img: '/bukti/img/tgl5bln5.png',
         title: 'Starlight Princess 1000',
         table: [['Tanggal', '05-05-2024'], ['Modal', 'Rp 89.000'], ['WD', 'Rp 4.600.000']]
     },
     {
-        img: '/bukti/img/tgl19bln6.webp',
+        img: '/bukti/img/tgl19bln6.png',
         title: 'Gates of Olympus',
         table: [['Tanggal', '19-06-2024'], ['Modal', 'Rp 50.000'], ['WD', 'Rp 3.950.000']]
     },
@@ -51,7 +51,7 @@ const items = [
         table: [['Tanggal', '03-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '13.000.000']]
     },
     {
-        img: '/bukti/img/tgl4bln8.webp.webp',
+        img: '/bukti/img/tgl4bln8.png.webp',
         title: 'Taiwan',
         table: [['Tanggal', '04-08-2024'], ['Modal', 'Rp 450.000'], ['WD', '10.400.000']]
     },
@@ -71,7 +71,7 @@ const items = [
         table: [['Tanggal', '06-08-2024'], ['Modal', 'Rp 30.000'], ['WD', '1.000.000']]
     },
     {
-        img: '/bukti/img/tgl7bln8.webp',
+        img: '/bukti/img/tgl7bln8.png',
         title: 'Sweet Bonanza 1000',
         table: [['Tanggal', '07-08-2024'], ['Modal', 'Rp 120.000'], ['WD', '3.550.000']]
     },
