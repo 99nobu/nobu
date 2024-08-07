@@ -11,7 +11,7 @@ const items = [
         table: [['Tanggal', '07-03-2024'], ['Modal', 'Rp 50.000'], ['WD', 'Rp 3.000.000']]
     },
     {
-        img: '/bukti/img/tgl0bln3.png',
+        img: '/bukti/img/tgl10bln3.png',
         title: 'SINGAPORE',
         table: [['Tanggal', '10-03-2024'], ['Modal', 'Rp 20.000'], ['WD', 'Rp 13.000.000']]
     },
@@ -21,7 +21,7 @@ const items = [
         table: [['Tanggal', '11-03-2024'], ['Modal', 'Rp 70.000'], ['WD', 'Rp 5.550.000']]
     },
     {
-        img: '/bukti/img/tgl9bln3.png',
+        img: '/bukti/img/tgl19bln3.png',
         title: 'Sugar Rush 1000',
         table: [['Tanggal', '19-03-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 7.500.000']]
     },
@@ -51,7 +51,7 @@ const items = [
         table: [['Tanggal', '03-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '13.000.000']]
     },
     {
-        img: '/bukti/img/tgl4bln8.png.webp',
+        img: '/bukti/img/tgl4bln8.png.png',
         title: 'Taiwan',
         table: [['Tanggal', '04-08-2024'], ['Modal', 'Rp 450.000'], ['WD', '10.400.000']]
     },
