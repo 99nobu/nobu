@@ -21,7 +21,7 @@ const items = [
         table: [['Tanggal', '05-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '8.000.000']]
     },
     {
-        img: '/bukti/img/tgl4bln8.png.png',
+        img: '/bukti/img/tgl4bln8.png',
         title: 'Taiwan',
         table: [['Tanggal', '04-08-2024'], ['Modal', 'Rp 450.000'], ['WD', '10.400.000']]
     },
