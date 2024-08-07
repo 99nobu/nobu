@@ -1,6 +1,11 @@
 const items = [
 
     {
+        img: '/bukti/img/tgl8bln8goo.webp',
+        title: 'Gates of Olympus',
+        table: [['Tanggal', '08-08-2024'], ['Modal', 'Rp 50.000'], ['WD', '1.000.000']]
+    },
+    {
         img: '/bukti/img/tgl7bln8.png',
         title: 'Sweet Bonanza 1000',
         table: [['Tanggal', '07-08-2024'], ['Modal', 'Rp 120.000'], ['WD', '3.550.000']]
@@ -41,9 +46,54 @@ const items = [
         table: [['Tanggal', '19-06-2024'], ['Modal', 'Rp 50.000'], ['WD', 'Rp 3.950.000']]
     },
     {
+        img: '/bukti/img/tgl12bln6hk.webp',
+        title: 'Hongkong',
+        table: [['Tanggal', '12-06-2024'], ['Modal', 'Rp 24.000.000'], ['WD', 'Rp 34.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl5bln6sp.webp',
+        title: 'Starlight Princess',
+        table: [['Tanggal', '05-06-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 5.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl25bln5sp1000.webp',
+        title: 'Starlight Princess 1000',
+        table: [['Tanggal', '25-05-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 6.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl13bln5goo.webp',
+        title: 'Gates of Olympus',
+        table: [['Tanggal', '13-05-2024'], ['Modal', 'Rp 50.000'], ['WD', 'Rp 1.100.000']]
+    },
+    {
+        img: '/bukti/img/tgl8bln5agd.webp',
+        title: 'Aztec Gems Deluxe',
+        table: [['Tanggal', '08-05-2024'], ['Modal', 'Rp 60.000'], ['WD', 'Rp 3.000.000']]
+    },
+    {
         img: '/bukti/img/tgl5bln5.png',
         title: 'Starlight Princess 1000',
         table: [['Tanggal', '05-05-2024'], ['Modal', 'Rp 89.000'], ['WD', 'Rp 4.600.000']]
+    },
+    {
+        img: '/bukti/img/tgl12bln4sp.webp',
+        title: 'Starlight Princess',
+        table: [['Tanggal', '12-04-2024'], ['Modal', 'Rp 90.000'], ['WD', 'Rp 2.900.000']]
+    },
+    {
+        img: '/bukti/img/tgl1bln4gos1000.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '01-04-2024'], ['Modal', 'Rp 120.000'], ['WD', 'Rp 5.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl1bln4goo.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '01-04-2024'], ['Modal', 'Rp 200.000'], ['WD', 'Rp 15.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl1bln4sp.webp',
+        title: 'Starlight Princess',
+        table: [['Tanggal', '01-04-2024'], ['Modal', 'Rp 70.000'], ['WD', 'Rp 3.000.000']]
     },
     {
         img: '/bukti/img/tgl1bln4.png',
