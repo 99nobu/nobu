@@ -56,6 +56,11 @@ const items = [
         table: [['Tanggal', '27-08-2024'], ['Modal', 'Rp 115.000'], ['WD', '5.900.000']]
     },
     {
+        img: '/bukti/img/tgl18bln7sb.webp',
+        title: 'Sweet Bonanza',
+        table: [['Tanggal', '18-07-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 3.700.000']]
+    },
+    {
         img: '/bukti/img/tgl16bln7goo.webp',
         title: 'Gates of Olympus',
         table: [['Tanggal', '16-07-2024'], ['Modal', 'Rp 200.000'], ['WD', 'Rp 8.000.000']]
@@ -96,9 +101,29 @@ const items = [
         table: [['Tanggal', '19-06-2024'], ['Modal', 'Rp 50.000'], ['WD', 'Rp 3.950.000']]
     },
     {
+        img: '/bukti/img/tgl14bln6sb.webp',
+        title: 'Sweet Bonanza',
+        table: [['Tanggal', '14-06-2024'], ['Modal', 'Rp 60.000'], ['WD', 'Rp 3.062.000']]
+    },
+    {
         img: '/bukti/img/tgl12bln6hk.webp',
         title: 'Hongkong',
         table: [['Tanggal', '12-06-2024'], ['Modal', 'Rp 24.000.000'], ['WD', 'Rp 34.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl10bln6sp2.webp',
+        title: 'Starlight Princess',
+        table: [['Tanggal', '10-06-2024'], ['Modal', 'Rp 30.000'], ['WD', 'Rp 1.005.000']]
+    },
+    {
+        img: '/bukti/img/tgl10bln6sp.webp',
+        title: 'Starlight Princess',
+        table: [['Tanggal', '10-06-2024'], ['Modal', 'Rp 160.000'], ['WD', 'Rp 21.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl9bln6goo.webp',
+        title: 'Gates of Olympus',
+        table: [['Tanggal', '09-06-2024'], ['Modal', 'Rp 95.000'], ['WD', 'Rp 6.000.000']]
     },
     {
         img: '/bukti/img/tgl5bln6sp.webp',
