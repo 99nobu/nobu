@@ -5,7 +5,7 @@ const items = [
         title: 'Starlight Princess 1000',
         table: [['Tanggal', '10-08-2024'], ['Modal', 'Rp 20.000'], ['WD', '2.600.000']]
     },
-    
+    {
         img: '/bukti/img/tgl9bln8sp1000.webp',
         title: 'Starlight Princess 1000',
         table: [['Tanggal', '09-08-2024'], ['Modal', 'Rp 55.000'], ['WD', '2.200.000']]
