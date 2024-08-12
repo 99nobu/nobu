@@ -1,6 +1,16 @@
 const items = [
 
     {
+        img: '/bukti/img/tgl11bln8goo1000.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '11-08-2024'], ['Modal', 'Rp 30.000'], ['WD', '2.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl11bln8sp.webp',
+        title: 'Starlight Princess',
+        table: [['Tanggal', '11-08-2024'], ['Modal', 'Rp 50.000'], ['WD', '1.500.000']]
+    },
+    {
         img: '/bukti/img/tgl10bln8sp1000.webp',
         title: 'Starlight Princess 1000',
         table: [['Tanggal', '10-08-2024'], ['Modal', 'Rp 20.000'], ['WD', '2.600.000']]
@@ -129,6 +139,21 @@ const items = [
         img: '/bukti/img/tgl5bln6sp.webp',
         title: 'Starlight Princess',
         table: [['Tanggal', '05-06-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 5.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl3bln6sp.webp',
+        title: 'Starlight Princess',
+        table: [['Tanggal', '03-06-2024'], ['Modal', 'Rp 60.000'], ['WD', 'Rp 3.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl2bln6sp1000.webp',
+        title: 'Starlight Princess 1000',
+        table: [['Tanggal', '02-06-2024'], ['Modal', 'Rp 480.000'], ['WD', 'Rp 20.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl1bln6gog1000.webp',
+        title: 'Starlight Princess 1000',
+        table: [['Tanggal', '01-06-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 5.900.000']]
     },
     {
         img: '/bukti/img/tgl25bln5sp1000.webp',
