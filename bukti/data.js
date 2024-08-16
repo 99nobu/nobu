@@ -1,6 +1,31 @@
 const items = [
 
     {
+        img: '/bukti/img/tgl16bln6goo1000.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '16-08-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 2.800.000']]
+    },
+    {
+        img: '/bukti/img/tgl16bln8goo10002.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '16-08-2024'], ['Modal', 'Rp 40.000'], ['WD', '1.900.000']]
+    },
+    {
+        img: '/bukti/img/tgl15bln8goo10003.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '15-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '5.200.000']]
+    },
+    {
+        img: '/bukti/img/tgl15bln8fow.webp',
+        title: 'Forge of Wealth',
+        table: [['Tanggal', '15-08-2024'], ['Modal', 'Rp 50.000'], ['WD', '1.800.000']]
+    },
+    {
+        img: '/bukti/img/tgl15bln8mw1.webp',
+        title: 'Mahjong Ways',
+        table: [['Tanggal', '15-08-2024'], ['Modal', 'Rp 50.000'], ['WD', '1.000.000']]
+    },
+    {
         img: '/bukti/img/tgl15bln8goo1000.webp',
         title: 'Gates of Olympus 1000',
         table: [['Tanggal', '15-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '3.800.000']]
