@@ -1,6 +1,11 @@
 const items = [
 
     {
+        img: '/bukti/img/tgl15bln8goo1000.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '15-08-2024'], ['Modal', 'Rp 100.000'], ['WD', '3.800.000']]
+    },
+    {
         img: '/bukti/img/tgl13bln8goo1000.webp',
         title: 'Gates of Olympus 1000',
         table: [['Tanggal', '13-08-2024'], ['Modal', 'Rp 250.000'], ['WD', '8.200.000']]
@@ -149,6 +154,31 @@ const items = [
         img: '/bukti/img/tgl19bln6sm.webp',
         title: 'Spaceman',
         table: [['Tanggal', '19-06-2024'], ['Modal', 'Rp 300.000'], ['WD', 'Rp 8.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl17bln6goo2.webp',
+        title: 'Gates of Olympus',
+        table: [['Tanggal', '17-06-2024'], ['Modal', 'Rp 40.000'], ['WD', 'Rp 3.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl17bln6sp2.webp',
+        title: 'Starlight Princess',
+        table: [['Tanggal', '17-06-2024'], ['Modal', 'Rp 50.000'], ['WD', 'Rp 2.700.000']]
+    },
+    {
+        img: '/bukti/img/tgl15bln6goo2.webp',
+        title: 'Gates of Olympus',
+        table: [['Tanggal', '15-06-2024'], ['Modal', 'Rp 97.000'], ['WD', 'Rp 5.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl15bln6gog.webp',
+        title: 'Gates of Gatotkaca',
+        table: [['Tanggal', '15-06-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 6.250.000']]
+    },
+    {
+        img: '/bukti/img/tgl14bln6mw.webp',
+        title: 'Mahjong Ways',
+        table: [['Tanggal', '14-06-2024'], ['Modal', 'Rp 50.000'], ['WD', 'Rp 3.500.000']]
     },
     {
         img: '/bukti/img/tgl14bln6sb.webp',
