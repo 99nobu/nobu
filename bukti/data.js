@@ -1,6 +1,21 @@
 const items = [
 
     {
+        img: '/bukti/img/tgl27bln8goo1000.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '27-08-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 6.800.000']]
+    },
+    {
+        img: '/bukti/img/tgl25bln8goo1000.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '25-08-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 10.000.000']]
+    },
+    {
+        img: '/bukti/img/tgl25bln8SP1000.webp',
+        title: 'Starlight Princess 1000',
+        table: [['Tanggal', '25-08-2024'], ['Modal', 'Rp 30.000'], ['WD', 'Rp 1.500.000']]
+    },
+    {
         img: '/bukti/img/tgl24bln8sp1000.webp',
         title: 'Starlight Princess 1000',
         table: [['Tanggal', '24-08-2024'], ['Modal', 'Rp 50.000'], ['WD', 'Rp 1.000.000']]
