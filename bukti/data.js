@@ -251,9 +251,9 @@ const items = [
         table: [['Tanggal', '03-07-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 10.000.000']]
     },
     {
-        img: '/bukti/img/tgl29bln6goo.webp',
+        img: '/bukti/img/tgl27bln6goo.webp',
         title: 'Gates of Olympus',
-        table: [['Tanggal', '29-06-2024'], ['Modal', 'Rp 200.000'], ['WD', 'Rp 12.000.000']]
+        table: [['Tanggal', '27-06-2024'], ['Modal', 'Rp 200.000'], ['WD', 'Rp 12.000.000']]
     },
     {
         img: '/bukti/img/tgl21bln6goo2.webp',
