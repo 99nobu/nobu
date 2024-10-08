@@ -1,6 +1,10 @@
 const items = [
 
     {
+        img: '/bukti/img/2024-10-091N.webp',
+        title: 'Starlight 1000 & 15000 Mania',
+        table: [['Tanggal', '09-10-2024'], ['Modal', 'Rp 1.000.000'], ['WD', 'Rp 30.700.000']]
+    },{
         img: '/bukti/img/2024-10-011N.webp',
         title: 'Olympus 1000',
         table: [['Tanggal', '01-10-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 2.700.000']]
