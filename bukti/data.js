@@ -1,7 +1,11 @@
 const items = [
 
     
-    {
+{
+        img: '/bukti/img/2025-07-23N.webp',
+        title: 'Sweet Bonanza 1000',
+        table: [['Tanggal', '23-07-2025'], ['Modal', 'Rp 120.000'], ['WD', 'Rp 5.880.450']]
+    },{
         img: '/bukti/img/2025-07-18N.webp',
         title: 'Gates of Olympus 1000',
         table: [['Tanggal', '18-07-2025'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 8.817.000']]
