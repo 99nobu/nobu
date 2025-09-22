@@ -1,162 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nobu99</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://nobu99.com/favicon.png"/>
-    <meta name="robots" content="noindex, nofollow">
-    
-    <style>
-        body {
-            background-color: #383838;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            font-family: 'Noto Color Emoji', sans-serif;
-        }
-        .emoji {
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.1em;
-        }
-        header {
-            background: #554b35;
-            padding: 10px;
-        }
-        header img {
-            max-width: 200px;
-        }
-        nav {
-            background: #ffcc1c;
-            padding: 5px;
-            margin-top: -1px;
-            display: flex;
-            justify-content: center;
-        }
-        nav a {
-            color: black;
-            text-decoration: none;
-            background: #fcfcfc;
-            border: none;
-            padding: 6px 20px;
-            margin: 0px 3px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 12px;
-            font-weight: bolder;
-            box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
-        }
-        table {
-            margin: 20px auto;
-            border-collapse: collapse;
-            width: 90%;
-            max-width: 600px;
-        }
-        th, td {
-            border: 1px solid #c0c0c0;
-            padding: 8px;
-        }
-        th {
-            background: linear-gradient(to bottom,#ffa800 0%,#ffe808 100%);
-            color: black;
-        }
-        td {
-            background-color: #fff;
-        }
-        h1,h2, .curr_date {
-            color: white;
-            margin: 0px;
-        }
-        .curr_date {
-            color: #ffe808;
-        }
-    </style>
-    <script type="text/javascript">
-        var serverTime = new Date();
-        var clientTime = new Date();
-        var Diff = serverTime.getTime() - clientTime.getTime();	
-        function displayServerTime(){
-            var clientTime = new Date();
-            var time = new Date(clientTime.getTime() + Diff);
-            var year = time.getFullYear();
-            var month = time.getMonth() + 1; // Months are zero-based, so add 1
-            var day = time.getDate();
-        
-            var dayarray = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
-            var montharray = ["Jan","Feb","Mar","April","May","Juni","Juli","Agustus","Sept","Okt","Nov","Des"];
-        
-            document.getElementById("curr_date").innerHTML = "Hari " + dayarray[time.getDay()] + ", " + day + " " + montharray[month - 1] + " " + year;
-        }        
-    </script>
+    <title>Prediksi Nobu99</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
 </head>
-<body onLoad="setInterval('displayServerTime()', 1000);">
-    <header>
-        <img src="https://nobu99.com/kilau2.gif" alt="Logo">
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="/logonobu.png" alt="Logo Nobu99" class="logo-img">
+        </div>
+        <button class="livechat-btn">Live Chat</button>
     </header>
-    <nav>
-        <a href="#table1">PREDIKSI HK</a>
-        <a href="#table2">PREDIKSI SDY</a>
-        <a href="#table3">PREDIKSI SGP</a>
-        <a href="#table4">PREDIKSI TTM</a>
-    </nav>
-    <h2 style="margin-top: 15px;">PREDIKSI NOBU99</h2>
-    <div class="curr_date" id="curr_date" style="text-align: center"></div>
-    <table id="table1">
-        <tr><th colspan="2">🇭🇰 PREDIKSI HK </th></tr>
-        <tr><td>BB 5</td><td id="bb5-1"></td></tr>
-        <tr><td>2d TOP</td><td id="top2d-1"></td></tr>
-        <tr><td>CB</td><td id="cb-1"></td></tr>
-    </table>
-    <table id="table2">
-        <tr><th colspan="2">🇦🇺 PREDIKSI SDY</th></tr>
-        <tr><td>BB 5</td><td id="bb5-2"></td></tr>
-        <tr><td>2d TOP</td><td id="top2d-2"></td></tr>
-        <tr><td>CB</td><td id="cb-2"></td></tr>
-    </table>
-    <table id="table3">
-        <tr><th colspan="2">🇸🇬 PREDIKSI SGP</th></tr>
-        <tr><td>BB 5</td><td id="bb5-3"></td></tr>
-        <tr><td>2d TOP</td><td id="top2d-3"></td></tr>
-        <tr><td>CB</td><td id="cb-3"></td></tr>
-    </table>
-    <table id="table4">
-        <tr><th colspan="2">🇲🇴 PREDIKSI TTM 13:00</th></tr>
-        <tr><td>BB 5</td><td id="bb5-4"></td></tr>
-        <tr><td>2d TOP</td><td id="top2d-4"></td></tr>
-        <tr><td>CB</td><td id="cb-4"></td></tr>
-    </table>
-    <table id="table5">
-        <tr><th colspan="2">🇲🇴 PREDIKSI TTM 16:00</th></tr>
-        <tr><td>BB 5</td><td id="bb5-5"></td></tr>
-        <tr><td>2d TOP</td><td id="top2d-5"></td></tr>
-        <tr><td>CB</td><td id="cb-5"></td></tr>
-    </table>
-    <table id="table6">
-        <tr><th colspan="2">🇲🇴 PREDIKSI TTM 19:00</th></tr>
-        <tr><td>BB 5</td><td id="bb5-6"></td></tr>
-        <tr><td>2d TOP</td><td id="top2d-6"></td></tr>
-        <tr><td>CB</td><td id="cb-6"></td></tr>
-    </table>
-    <table id="table7">
-        <tr><th colspan="2">🇲🇴 PREDIKSI TTM 22:00</th></tr>
-        <tr><td>BB 5</td><td id="bb5-7"></td></tr>
-        <tr><td>2d TOP</td><td id="top2d-7"></td></tr>
-        <tr><td>CB</td><td id="cb-7"></td></tr>
-    </table>
-    <table id="table8">
-        <tr><th colspan="2">🇲🇴 PREDIKSI TTM 23:00</th></tr>
-        <tr><td>BB 5</td><td id="bb5-8"></td></tr>
-        <tr><td>2d TOP</td><td id="top2d-8"></td></tr>
-        <tr><td>CB</td><td id="cb-8"></td></tr>
-    </table>
-    <table id="table9">
-        <tr><th colspan="2">🇲🇴 PREDIKSI TTM 00:00</th></tr>
-        <tr><td>BB 5</td><td id="bb5-9"></td></tr>
-        <tr><td>2d TOP</td><td id="top2d-9"></td></tr>
-        <tr><td>CB</td><td id="cb-9"></td></tr>
-    </table>
+
+    <!-- Banner -->
+    <div class="banner">
+        <img src="/nobu99.webp" alt="Banner Nobu99">
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Lottery Navigation -->
+        <div class="lottery-nav">
+            <div class="nav-item active" data-lottery="totomacau" onclick="handleNavClick('totomacau')">
+                <img src="https://imageshost.b-cdn.net/pasaran/totomacau.webp" alt="Toto Macau">
+                <span>Toto Macau 4D</span>
+            </div>
+            <div class="nav-item" data-lottery="hongkong" onclick="handleNavClick('hongkong')">
+                <img src="https://imageshost.b-cdn.net/pasaran/hongkong.webp" alt="Hongkong Lotto">
+                <span>Hongkong Lotto</span>
+            </div>
+            <div class="nav-item" data-lottery="singapore" onclick="handleNavClick('singapore')">
+                <img src="https://imageshost.b-cdn.net/pasaran/singapore.webp" alt="Singapore Pools">
+                <span>Singapore Pools</span>
+            </div>
+            <div class="nav-item" data-lottery="sydney" onclick="handleNavClick('sydney')">
+                <img src="https://imageshost.b-cdn.net/pasaran/sydney.webp" alt="Sydney Lotto">
+                <span>Sydney Lotto</span>
+            </div>
+            <div class="nav-item" data-lottery="kingkong" onclick="handleNavClick('kingkong')">
+                <img src="https://imageshost.b-cdn.net/pasaran/kingkong.webp" alt="KingKong">
+                <span>Kingkong 4D</span>
+            </div>
+        </div>
+
+        <!-- Lucky Number Button -->
+        <button class="lucky-btn" id="luckyBtn">Angka Hoki Hari Ini</button>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="grubsearchPasaran">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExIDJDMTUuOTcwNiAyIDIwIDYuMDI5NDQgMjAgMTFDMjAgMTMuMTI0IDE5LjI2MzMgMTUuMDc3OCAxOC4wMzIzIDE2LjYxNDZMMjIuNzA3MSAyMS4yOTI5TDIxLjI5MjkgMjIuNzA3MUwxNi42MTQ2IDE4LjAzMjNDMTUuMDc3OCAxOS4yNjMzIDEzLjEyNCAyMCAxMSAyMEM2LjAyOTQ0IDIwIDIgMTUuOTcwNiAyIDExQzIgNi4wMjk0NCA2LjAyOTQ0IDIgMTEgMlpNMTEgNEMwLjEzMzcgNCA0IDcuMTM0MDEgNCAxMUM0IDE0Ljg2NiA3LjEzNDAxIDE4IDExIDE4QzE0Ljg2NiAxOCAxOCAxNC44NjYgMTggMTFDMTggNy4xMzQwMSAxNC44NjYgNCAxMSA0WiIgZmlsbD0iY3VycmVudENvbG9yIi8+Cjwvc3ZnPg==" alt="Search">
+                <input type="text" id="searchInput" placeholder="Cari Pasaran...">
+            </div>
+        </div>
+
+        <!-- Date Display -->
+        <div class="date-display">
+            Tgl  <span id="current-date"></span>
+        </div>
+
+        <!-- Lottery Cards -->
+        <div class="cards-container" id="cardsContainer">
+            <!-- Cards will be generated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Lucky Number Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <div class="popup-header">
+                <h3>Angka Hokimu Hari Ini</h3>
+                <button class="close-btn" id="closePopup">&times;</button>
+            </div>
+            <div class="popup-content">
+                <div class="lucky-number" id="luckyNumber">88888</div>
+                <p>Semoga beruntung!</p>
+                <button class="generate-btn" id="generateLucky">Coba Lagi</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
