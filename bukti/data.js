@@ -2,6 +2,10 @@ const items = [
 
     
     {
+        img: '/bukti/img/2025-11-04N.webp',
+        title: 'Sweet Bonanza 1000 Dice',
+        table: [['Tanggal', '04-11-2025'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 7.350.960']]
+    },{
         img: '/bukti/img/2025-10-27N.webp',
         title: 'Gates of Olympus 1000',
         table: [['Tanggal', '27-10-2025'], ['Modal', 'Rp 180.000'], ['WD', 'Rp 12.000.000']]
@@ -681,6 +685,7 @@ const items = [
     },
     
 ];
+
 
 
 
