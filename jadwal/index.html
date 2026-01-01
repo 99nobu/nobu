@@ -1,271 +1,1370 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>JADWAL PASARAN</title>
-<meta name="robots" content="noindex,follow" />
-<meta name="googlebot" content="noindex,follow" />
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nobu99</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
         body {
-            font-family: 'Trebuchet MS', sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+            color: #5D4037;
+            line-height: 1.5;
+            padding-bottom: 90px; /* Space for quick stats */
+            min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
-        #customers {
-            font-family: Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
+        /* Tema Kuning-Orange */
+        :root {
+            --primary: #ffd900;
+            --primary-dark: #F57C00;
+            --primary-light: #FFB74D;
+            --secondary: #FFA000;
+            --accent: #FF5722;
+            --light-bg: #FFF3E0;
+            --dark-text: #5D4037;
+            --card-bg: #FFFFFF;
+            --shadow: rgba(255, 152, 0, 0.15);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 15px 10px;
+            box-shadow: 0 4px 20px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
             width: 100%;
-            height: 100px;
         }
 
-        #customers td,
-        #customers th {
-            border: 1px solid #ffbf00;
-            padding: 15px;
-
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+            padding: 0 5px;
         }
 
-        #customers tr:nth-child(even) {     
-            background-color: #e6e6e6;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+            width: 100%;
+            justify-content: center;
         }
 
-        #customers tr:hover {
-            background-color: #644400;
-            color: #fff;
-        }
-
-        #customers th {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            background-color: #ffdd00;
-            color: black;
+        .logo i {
+            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 50%;
+            min-width: 40px;
             text-align: center;
-            font-size: 25px;
         }
 
-        td {
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .logo span {
+            color: #FFEB3B;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            opacity: 0.95;
+            font-weight: 500;
             text-align: center;
-            font-size: 20px;
-            font-weight: 650;
-            height: 35px;
+            width: 100%;
         }
 
-        td:hover {
-            background-color: #ff0000;
-          color: #000000;
+        /* Search */
+        .search-container {
+            padding: 10px;
+            background: var(--light-bg);
+            border-bottom: 2px solid var(--primary-light);
+            width: 100%;
         }
 
-        a {
-            text-decoration: none;
-            background-color: #ff8a00;
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 30px;
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 25px;
+            padding: 10px 15px;
+            border: 2px solid var(--primary-light);
+            box-shadow: 0 3px 10px var(--shadow);
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .search-box:focus-within {
+            border-color: var(--primary);
+            box-shadow: 0 3px 15px rgba(255, 152, 0, 0.25);
+        }
+
+        .search-box i {
+            color: var(--primary);
+            margin-right: 10px;
+            font-size: 1rem;
+            min-width: 20px;
+        }
+
+        #searchInput {
+            flex: 1;
+            border: none;
+            background: transparent;
+            font-size: 0.95rem;
+            padding: 5px 0;
+            outline: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            width: 100%;
+            min-width: 0;
+        }
+
+        #searchInput::placeholder {
+            color: #BDBDBD;
+        }
+
+        .clear-btn {
+            background: var(--primary-light);
+            border: none;
+            color: white;
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+            min-width: 25px;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 10px;
+            background: white;
+            border-bottom: 2px solid var(--light-bg);
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .filter-tab {
+            flex: 1;
+            margin: 0 3px;
+            padding: 8px 5px;
+            background: var(--light-bg);
+            border: 2px solid var(--light-bg);
+            border-radius: 8px;
+            color: var(--dark-text);
+            font-weight: 600;
+            font-size: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            transition: all 0.3s;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .filter-tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 3px 8px var(--shadow);
+        }
+
+        .filter-tab i {
+            font-size: 0.9rem;
+            min-width: 16px;
+        }
+
+        /* Main Container */
+        .main-container {
+            padding: 0 10px;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Jadwal Grid - 2 Kolom Responsif */
+        .jadwal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        /* Cards - Ukuran lebih kecil untuk mobile */
+        .jadwal-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 4px 12px var(--shadow);
+            transition: all 0.3s;
+            border: 2px solid var(--primary-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 220px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--light-bg);
+            min-height: 40px;
+        }
+
+        .nama-pasaran {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .nama-pasaran i {
+            color: var(--primary);
+            font-size: 0.9rem;
+            min-width: 16px;
+        }
+
+        .status-badge {
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
-        .judul {
-            background: linear-gradient(360deg, #000000 10%, #3f3f3f);
-            padding: 1px 10px;
+        .status-open {
+            background: #4CAF50;
             color: white;
         }
 
-        .divider {
-            height: 250px;
-            clear: both;
+        .status-closed {
+            background: #F44336;
+            color: white;
         }
 
-        .carousel {
-            position: relative;
-            padding: 0px 1%;
-            max-width: 100%;
-            margin-left: auto;
-            margin-right: auto; 
-            margin-top: 5px;
-            margin-bottom: 5px;
+        .status-soon {
+            background: #FF9800;
+            color: white;
+        }
+
+        /* Card Body - Lebih compact */
+        .card-body {
+            flex: 1;
+            margin-bottom: 12px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 0.8rem;
+        }
+
+        .info-label {
+            color: #795548;
+            font-size: 0.75rem;
+            font-weight: 500;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .info-value {
+            font-weight: 600;
+            color: var(--dark-text);
+            text-align: right;
+            font-size: 0.8rem;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .time-value {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* Live Draw Section - Lebih kecil */
+        .live-draw-section {
+            background: var(--light-bg);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px dashed var(--primary-light);
+            width: 100%;
+        }
+
+        .live-draw-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 0.8rem;
+        }
+
+        .live-draw-label span {
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .live-draw-label i {
+            color: #F44336;
+            animation: pulse 1.5s infinite;
+            font-size: 0.9rem;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .live-draw-btn {
+            width: 100%;
+            padding: 8px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.3s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .live-draw-btn.disabled {
+            background: #BDBDBD;
+            cursor: not-allowed;
+        }
+
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 30px 15px;
+            display: none;
+            grid-column: 1 / -1;
+        }
+
+        .no-results i {
+            font-size: 2.5rem;
+            color: var(--primary-light);
+            margin-bottom: 10px;
+        }
+
+        .no-results h3 {
+            color: var(--dark-text);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        /* Quick Stats */
+        .quick-stats {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 12px;
+            background: white;
+            box-shadow: 0 -3px 15px var(--shadow);
+            border-radius: 12px;
+            border: 2px solid var(--primary-light);
+            z-index: 90;
+            max-width: calc(100% - 20px);
+        }
+
+        .stats-left {
+            display: flex;
+            gap: 15px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 0;
+        }
+
+        .stat-item i {
+            font-size: 1.1rem;
+            color: var(--primary);
+            background: var(--light-bg);
+            padding: 6px;
+            border-radius: 8px;
+            min-width: 32px;
+        }
+
+        .stat-item div {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .stat-value {
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--dark-text);
+            white-space: nowrap;
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            color: #795548;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        /* Sort Button - Paling Kanan */
+        .sort-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px var(--shadow);
+            white-space: nowrap;
+            min-width: 80px;
+        }
+
+        .sort-btn i {
+            font-size: 0.9rem;
+        }
+
+        /* Sort Options Modal */
+        .sort-modal {
+            position: fixed;
+            bottom: 70px;
+            right: 10px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+            overflow: hidden;
+            border: 2px solid var(--primary-light);
+            min-width: 180px;
+            max-width: 90%;
+        }
+
+        .sort-option {
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            border-bottom: 1px solid var(--light-bg);
+            font-size: 0.85rem;
+        }
+
+        .sort-option:last-child {
+            border-bottom: none;
+        }
+
+        .sort-option.active {
+            background: var(--light-bg);
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Responsive untuk layar sangat kecil */
+        @media (max-width: 320px) {
+            .logo h1 {
+                font-size: 1.3rem;
+            }
+            
+            .jadwal-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-tab {
+                font-size: 0.7rem;
+                padding: 6px 3px;
+            }
+            
+            .quick-stats {
+                left: 5px;
+                right: 5px;
+                max-width: calc(100% - 10px);
+            }
+            
+            .stats-left {
+                gap: 10px;
+            }
+            
+            .sort-btn {
+                padding: 6px 10px;
+                font-size: 0.75rem;
+                min-width: 70px;
+            }
+        }
+
+        @media (min-width: 400px) {
+            .jadwal-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .jadwal-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            
+            .quick-stats {
+                max-width: 500px;
+                margin: 0 auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
 <body>
-<div class="judul">
-<h1 style="text-align: center;"><span style="font-size: 50px;">JADWAL PASARAN NOBU99</span></h1>
-<p style="text-align: center; font-size: 35px;">Link > <a href="https://pub-cfa1fa4d05b8438ca3844e258f5ac2f7.r2.dev/login.html">NOBU99</a> PREDIKSI > <a href="https://nobu99.pages.dev/prediksi/">KLIK DISINI</a></p>
-</div>
-<table id="customers">
-<tr>
-<th>NAMA PASARAN</th>
-<th>JADWAL</th>
-<th>TUTUP</th>
-<th>BUKA</th>
-<th>LIVE DRAW</th>
-</tr>
-<tr>
-<td>TOTO MACAU 00:00</td>
-<td>Senin s/d Minggu</td>
-<td>00:10 (WIB)</td>
-<td>00:30 (WIB)</td>
-<td><a href="https://kick.com/totomacau-4d">Klik Disini</a></td>
-</tr>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-clock"></i>
+                <h1>Nobu<span>99</span></h1>
+            </div>
+            <p class="subtitle">Live Draw & Jadwal Pasaran</p>
+        </div>
+    </header>
 
-<tr>
-<td>SOLOMON POOLS</td>
-<td>Senin s/d Minggu</td>
-<td>01:45 (WIB)</td>
-<td>02:00 (WIB)</td>
-<td><a href="https://solomonpools.co/">Klik Disini</a></td>
-</tr>
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Cari nama pasaran...">
+            <button class="clear-btn" id="clearBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
 
-<tr>
-    <td>BEIRUT POOLS</td>
-    <td>Senin s/d Minggu</td>
-    <td>03:45 (WIB)</td>
-    <td>04:00 (WIB)</td>
-    <td><a href="https://beirutpools.co/">Klik Disini</a></td>
-</tr>
+    <!-- Jadwal Container -->
+    <main class="main-container">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">
+                <i class="fas fa-globe"></i> Semua
+            </button>
+            <button class="filter-tab" data-filter="open">
+                <i class="fas fa-door-open"></i> Buka
+            </button>
+            <button class="filter-tab" data-filter="closed">
+                <i class="fas fa-door-closed"></i> Tutup
+            </button>
+        </div>
 
-<tr>
-    <td>TRINIDAD POOLS</td>
-    <td>Senin s/d Minggu</td>
-    <td>05:45 (WIB)</td>
-    <td>06:00 (WIB)</td>
-    <td><a href="https://trinidadpools.online/">Klik Disini</a></td>
-</tr>
+        <!-- Jadwal Grid -->
+        <div class="jadwal-grid" id="jadwalContainer">
+            <!-- Cards akan diisi oleh JavaScript -->
+        </div>
+        
+        <!-- No Results -->
+        <div class="no-results" id="noResults">
+            <i class="fas fa-search"></i>
+            <h3>Pasaran tidak ditemukan</h3>
+            <p>Coba dengan kata kunci lain</p>
+        </div>
+    </main>
 
-<tr>
-    <td>CANBERRA POOLS</td>
-    <td>Senin s/d Minggu</td>
-    <td>07:45 (WIB)</td>
-    <td>08:00 (WIB)</td>
-    <td><a href="https://canberrapools.co/">Klik Disini</a></td>
-</tr>
+    <!-- Quick Stats dengan Sort Button -->
+    <div class="quick-stats">
+        <div class="stats-left">
+            <div class="stat-item">
+                <i class="fas fa-door-open"></i>
+                <div>
+                    <span class="stat-value" id="openCount">0</span>
+                    <span class="stat-label">BUKA</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <span class="stat-value" id="totalCount">0</span>
+                    <span class="stat-label">TOTAL</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sort Button Paling Kanan -->
+        <button class="sort-btn" id="sortButton">
+            <i class="fas fa-sort-amount-down"></i>
+            <span>Urutkan</span>
+        </button>
+    </div>
 
-<tr>
-    <td>CUBA POOLS</td>
-    <td>Senin s/d Minggu</td>
-    <td>11:15 (WIB)</td>
-    <td>11:30 (WIB)</td>
-    <td><a href="https://cubapools.co/">Klik Disini</a></td>
-</tr>
+    <!-- Sort Options Modal -->
+    <div class="sort-modal" id="sortModal">
+        <div class="sort-option" data-sort="jam-buka-asc">
+            <span>Jam Buka (Awal → Akhir)</span>
+            <i class="fas fa-sort-numeric-down"></i>
+        </div>
+        <div class="sort-option" data-sort="jam-buka-desc">
+            <span>Jam Buka (Akhir → Awal)</span>
+            <i class="fas fa-sort-numeric-up"></i>
+        </div>
+        <div class="sort-option" data-sort="nama-asc">
+            <span>Nama (A → Z)</span>
+            <i class="fas fa-sort-alpha-down"></i>
+        </div>
+        <div class="sort-option" data-sort="nama-desc">
+            <span>Nama (Z → A)</span>
+            <i class="fas fa-sort-alpha-up"></i>
+        </div>
+        <div class="sort-option active" data-sort="default">
+            <span>Default</span>
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
 
-<tr>
-    <td>TOTO MACAU 13:00</td>
-    <td>Senin s/d Minggu</td>
-    <td>12:50 (WIB)</td>
-    <td>13:00 (WIB)</td>
-    <td><a href="https://kick.com/totomacau-4d/">Klik Disini</a></td>
-</tr>
+    <script>
+        // Data pasaran dengan live draw links - JAM DIPERBAIKI (BUKA dan TUTUP dibalik)
+        const pasaranData = [
+            {
+                id: 1,
+                nama: "GEORGIA MID",
+                hari: "Setiap Hari",
+                buka: "00:29", // DIBALIK: sebelumnya tutup 00:29, sekarang jadi buka
+                tutup: "00:15", // DIBALIK: sebelumnya buka 00:15, sekarang jadi tutup
+                liveDraw: "https://www.wsbtv.sitem/",
+                status: "open"
+            },
+            {
+                id: 2,
+                nama: "KENTUCKY M",
+                hari: "Setiap Hari",
+                buka: "01:30", // DIBALIK
+                tutup: "01:10", // DIBALIK
+                liveDraw: "https://www.kylottery.sitem/apps/draw_games",
+                status: "open"
+            },
+            {
+                id: 3,
+                nama: "SOLOMON",
+                hari: "Setiap Hari",
+                buka: "02:00", // DIBALIK
+                tutup: "01:45", // DIBALIK
+                liveDraw: "https://gtlotto.pages.dev/solomon/",
+                status: "open"
+            },
+            {
+                id: 4,
+                nama: "VIRGINIA DAY",
+                hari: "Setiap Hari",
+                buka: "02:00", // DIBALIK
+                tutup: "01:45", // DIBALIK
+                liveDraw: "https://www.valottery.sitem/data/draw-games/pick4",
+                status: "open"
+            },
+            {
+                id: 5,
+                nama: "WISCONSIN",
+                hari: "Setiap Hari",
+                buka: "02:30", // DIBALIK
+                tutup: "02:19", // DIBALIK
+                liveDraw: "https://www.youtube.com/watch?v=IJFrE_pGQRM",
+                status: "open"
+            },
+            {
+                id: 6,
+                nama: "OREGON 1",
+                hari: "Setiap Hari",
+                buka: "04:00", // DIBALIK
+                tutup: "03:50", // DIBALIK
+                liveDraw: "https://www.oregonlottery.org/pick-4/winning-numbers/",
+                status: "open"
+            },
+            {
+                id: 7,
+                nama: "JAMAICA",
+                hari: "Setiap Hari",
+                buka: "05:00", // DIBALIK
+                tutup: "04:45", // DIBALIK
+                liveDraw: "https://gtlotto.pages.dev/jamaica/",
+                status: "open"
+            },
+            {
+                id: 8,
+                nama: "OREGON 2",
+                hari: "Setiap Hari",
+                buka: "07:00", // DIBALIK
+                tutup: "06:50", // DIBALIK
+                liveDraw: "https://www.oregonlottery.org/pick-4/winning-numbers/",
+                status: "open"
+            },
+            {
+                id: 9,
+                nama: "GEORGIA EVE",
+                hari: "Setiap Hari",
+                buka: "07:00", // DIBALIK
+                tutup: "06:50", // DIBALIK
+                liveDraw: "https://www.wsbtv.sitem/",
+                status: "open"
+            },
+            {
+                id: 10,
+                nama: "OREGON 3",
+                hari: "Setiap Hari",
+                buka: "10:00", // DIBALIK
+                tutup: "09:50", // DIBALIK
+                liveDraw: "https://www.oregonlottery.org/pick-4/winning-numbers/",
+                status: "open"
+            },
+            {
+                id: 11,
+                nama: "VIRGINIA PM",
+                hari: "Setiap Hari",
+                buka: "11:00", // DIBALIK
+                tutup: "10:45", // DIBALIK
+                liveDraw: "https://www.valottery.sitem/data/draw-games/pick4",
+                status: "open"
+            },
+            {
+                id: 12,
+                nama: "KENTUCKY EV",
+                hari: "Setiap Hari",
+                buka: "11:15", // DIBALIK
+                tutup: "10:50", // DIBALIK
+                liveDraw: "https://www.kylottery.sitem/apps/draw_games",
+                status: "open"
+            },
+            {
+                id: 13,
+                nama: "GEORGIA NIG",
+                hari: "Setiap Hari",
+                buka: "11:50", // DIBALIK
+                tutup: "11:25", // DIBALIK
+                liveDraw: "https://www.wsbtv.sitem/",
+                status: "open"
+            },
+            {
+                id: 14,
+                nama: "CAMBODIA",
+                hari: "Setiap Hari",
+                buka: "11:55", // DIBALIK
+                tutup: "11:30", // DIBALIK
+                liveDraw: "https://www.magnumcambodia.com/",
+                status: "open"
+            },
+            {
+                id: 15,
+                nama: "BULLSEYE",
+                hari: "Setiap Hari",
+                buka: "12:10", // DIBALIK
+                tutup: "11:50", // DIBALIK
+                liveDraw: "https://mylotto.co.nz/results/bullseye",
+                status: "open"
+            },
+            {
+                id: 16,
+                nama: "OREGON 4",
+                hari: "Setiap Hari",
+                buka: "13:00", // DIBALIK
+                tutup: "12:50", // DIBALIK
+                liveDraw: "https://www.oregonlottery.org/pick-4/winning-numbers/",
+                status: "open"
+            },
+            {
+                id: 17,
+                nama: "SYDNEY",
+                hari: "Setiap Hari",
+                buka: "13:55", // DIBALIK
+                tutup: "13:20", // DIBALIK
+                liveDraw: "https://sydneylotto.com",
+                status: "open"
+            },
+            {
+                id: 18,
+                nama: "ASMAT",
+                hari: "Setiap Hari",
+                buka: "15:00", // DIBALIK
+                tutup: "14:45", // DIBALIK
+                liveDraw: "https://gtlotto.pages.dev/asmat/",
+                status: "open"
+            },
+            {
+                id: 19,
+                nama: "CHINA",
+                hari: "Setiap Hari",
+                buka: "15:30", // DIBALIK
+                tutup: "15:10", // DIBALIK
+                liveDraw: "https://www.chinapools.asia/",
+                status: "open"
+            },
+            {
+                id: 20,
+                nama: "JAPAN",
+                hari: "Setiap Hari",
+                buka: "17:20", // DIBALIK
+                tutup: "16:50", // DIBALIK
+                liveDraw: "http://www.japanpools.online",
+                status: "open"
+            },
+            {
+                id: 21,
+                nama: "SINGAPORE",
+                hari: "Setiap Hari",
+                buka: "17:40", // DIBALIK
+                tutup: "16:50", // DIBALIK
+                liveDraw: "https://online.singaporepools.com/en/lottery",
+                status: "open"
+            },
+            {
+                id: 22,
+                nama: "SCOTLAND",
+                hari: "Setiap Hari",
+                buka: "18:30", // DIBALIK
+                tutup: "18:15", // DIBALIK
+                liveDraw: "https://gtlotto.pages.dev/scotland/",
+                status: "open"
+            },
+            {
+                id: 23,
+                nama: "PCSO",
+                hari: "Setiap Hari",
+                buka: "20:10", // DIBALIK
+                tutup: "19:55", // DIBALIK
+                liveDraw: "https://www.youtube.sitem/channel/UCJCUbMaY593_4SN1QPG7NFQ",
+                status: "open"
+            },
+            {
+                id: 24,
+                nama: "TAIWAN",
+                hari: "Setiap Hari",
+                buka: "20:45", // DIBALIK
+                tutup: "20:30", // DIBALIK
+                liveDraw: "https://www.taiwan-lotto.com/",
+                status: "open"
+            },
+            {
+                id: 25,
+                nama: "ALBANIA",
+                hari: "Setiap Hari",
+                buka: "21:00", // DIBALIK
+                tutup: "20:45", // DIBALIK
+                liveDraw: "https://gtlotto.pages.dev/albania/",
+                status: "open"
+            },
+            {
+                id: 26,
+                nama: "HONGKONG",
+                hari: "Setiap Hari",
+                buka: "23:00", // DIBALIK
+                tutup: "22:25", // DIBALIK
+                liveDraw: "https://hongkonglotto.com",
+                status: "open"
+            },
+            {
+                id: 27,
+                nama: "GUANGZHOU",
+                hari: "Setiap Hari",
+                buka: "23:30", // DIBALIK
+                tutup: "23:10", // DIBALIK
+                liveDraw: "https://gtlotto.pages.dev/guangzhou/",
+                status: "open"
+            },
+            {
+                id: 28,
+                nama: "TOTOMACAU 5D 1",
+                hari: "Setiap Hari",
+                buka: "15:15", // DIBALIK
+                tutup: "15:00", // DIBALIK
+                liveDraw: "https://kick.com/studio-live-game",
+                status: "open"
+            },
+            {
+                id: 29,
+                nama: "TOTOMACAU 5D 2",
+                hari: "Setiap Hari",
+                buka: "21:15", // DIBALIK
+                tutup: "21:00", // DIBALIK
+                liveDraw: "https://kick.com/studio-live-game",
+                status: "open"
+            },
+            {
+                id: 30,
+                nama: "KINGKONG 4D 1",
+                hari: "Setiap Hari",
+                buka: "17:00", // DIBALIK
+                tutup: "11:00", // DIBALIK
+                liveDraw: "https://www.youtube.com/@KingKongPools",
+                status: "open"
+            },
+            {
+                id: 31,
+                nama: "KINGKONG 4D 2",
+                hari: "Setiap Hari",
+                buka: "23:30", // DIBALIK
+                tutup: "17:30", // DIBALIK
+                liveDraw: "https://www.youtube.com/@KingKongPools",
+                status: "open"
+            },
+            {
+                id: 32,
+                nama: "TOTOMACAU 1",
+                hari: "Setiap Hari",
+                buka: "00:15", // DIBALIK
+                tutup: "00:00", // DIBALIK
+                liveDraw: "https://kick.com/studio-live-game",
+                status: "open"
+            },
+            {
+                id: 33,
+                nama: "TOTOMACAU 2",
+                hari: "Setiap Hari",
+                buka: "13:15", // DIBALIK
+                tutup: "13:00", // DIBALIK
+                liveDraw: "https://kick.com/studio-live-game",
+                status: "open"
+            },
+            {
+                id: 34,
+                nama: "TOTOMACAU 3",
+                hari: "Setiap Hari",
+                buka: "16:15", // DIBALIK
+                tutup: "16:00", // DIBALIK
+                liveDraw: "https://kick.com/studio-live-game",
+                status: "open"
+            },
+            {
+                id: 35,
+                nama: "TOTOMACAU 4",
+                hari: "Setiap Hari",
+                buka: "19:15", // DIBALIK
+                tutup: "19:00", // DIBALIK
+                liveDraw: "https://kick.com/studio-live-game",
+                status: "open"
+            },
+            {
+                id: 36,
+                nama: "TOTOMACAU 5",
+                hari: "Setiap Hari",
+                buka: "22:15", // DIBALIK
+                tutup: "22:00", // DIBALIK
+                liveDraw: "https://kick.com/studio-live-game",
+                status: "open"
+            },
+            {
+                id: 37,
+                nama: "TOTOMACAU 6",
+                hari: "Setiap Hari",
+                buka: "23:15", // DIBALIK
+                tutup: "23:00", // DIBALIK
+                liveDraw: "https://kick.com/studio-live-game",
+                status: "open"
+            }
+        ];
 
-<tr>
-    <td>SYDNEY POOLS</td>
-    <td>Senin s/d Minggu</td>
-    <td>14:00 (WIB)</td>
-    <td>14:15 (WIB)</td>
-    <td><a href="https://sydneylotto.com/">Klik Disini</a></td>
-</tr>
+        // DOM Elements
+        const jadwalContainer = document.getElementById('jadwalContainer');
+        const searchInput = document.getElementById('searchInput');
+        const clearBtn = document.getElementById('clearBtn');
+        const noResults = document.getElementById('noResults');
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const openCount = document.getElementById('openCount');
+        const totalCount = document.getElementById('totalCount');
+        const sortButton = document.getElementById('sortButton');
+        const sortModal = document.getElementById('sortModal');
+        const sortOptions = document.querySelectorAll('.sort-option');
 
-<tr>
-    <td>ASMAT POOLS</td>
-    <td>Senin s/d Minggu</td>
-    <td>14:45 (WIB)</td>
-    <td>15:00 (WIB)</td>
-    <td><a href="https://asmatpools.co/">Klik Disini</a></td>
-</tr>
+        // Variables
+        let currentFilter = 'all';
+        let currentSearch = '';
+        let currentSort = 'default';
+        let displayData = [...pasaranData];
 
-<tr>
-    <td>TOTO MACAU 5D</td>
-    <td>Senin s/d Minggu</td>
-    <td>14:50 (WIB)</td>
-    <td>15:00 (WIB)</td>
-    <td><a href="https://www.kick.com/studio-live-game">Klik Disini</a></td>
-</tr>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update stats
+            updateStats();
+            
+            // Render all cards
+            renderCards(pasaranData);
+            
+            // Search functionality
+            searchInput.addEventListener('input', handleSearch);
+            
+            // Clear search
+            clearBtn.addEventListener('click', function() {
+                searchInput.value = '';
+                currentSearch = '';
+                clearBtn.style.display = 'none';
+                applyFilters();
+            });
+            
+            // Filter tabs
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.dataset.filter;
+                    applyFilters();
+                });
+            });
+            
+            // Sort button
+            sortButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                sortModal.style.display = sortModal.style.display === 'block' ? 'none' : 'block';
+            });
+            
+            // Sort options
+            sortOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    sortOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    currentSort = this.dataset.sort;
+                    
+                    // Update sort button text
+                    const sortText = this.querySelector('span').textContent;
+                    const shortText = sortText.split(' ')[0];
+                    sortButton.querySelector('span').textContent = shortText.length > 6 ? shortText.substring(0, 6) + '..' : shortText;
+                    
+                    // Close modal
+                    sortModal.style.display = 'none';
+                    
+                    // Apply sort
+                    applyFilters();
+                });
+            });
+            
+            // Close modal when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!sortModal.contains(e.target) && e.target !== sortButton) {
+                    sortModal.style.display = 'none';
+                }
+            });
+            
+            // Auto update status every minute
+            setInterval(updateAllStatuses, 60000);
+        });
 
-<tr>
-    <td>TOTO MACAU 16</td>
-    <td>Senin s/d Minggu</td>
-    <td>15:50 (WIB)</td>
-    <td>16:00 (WIB)</td>
-    <td><a href="https://kick.com/totomacau-4d/">Klik Disini</a></td>
-</tr>
+        // Render cards in responsive grid
+        function renderCards(data) {
+            jadwalContainer.innerHTML = '';
+            noResults.style.display = 'none';
+            
+            if (data.length === 0) {
+                noResults.style.display = 'block';
+                return;
+            }
+            
+            data.forEach(pasaran => {
+                const card = createCard(pasaran);
+                jadwalContainer.appendChild(card);
+            });
+            
+            // Update display data for stats
+            displayData = [...data];
+            updateStats();
+        }
 
-<tr>
-    <td>KING KONG 4D</td>
-    <td>Senin s/d Minggu</td>
-    <td>16:50 (WIB)</td>
-    <td>17:00 (WIB)</td>
-    <td><a href="https://www.kingkongpools.com/">Klik Disini</a></td>
-</tr>
+        // Create card element
+        function createCard(pasaran) {
+            const card = document.createElement('div');
+            card.className = 'jadwal-card';
+            
+            const status = getCurrentStatus(pasaran);
+            const statusText = getStatusText(status);
+            const statusClass = `status-${status}`;
+            const isOpen = status === 'open';
+            const isSoon = status === 'soon';
+            
+            card.innerHTML = `
+                <div class="card-header">
+                    <div class="nama-pasaran">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span title="${pasaran.nama}">${pasaran.nama.length > 15 ? pasaran.nama.substring(0, 15) + '...' : pasaran.nama}</span>
+                    </div>
+                    <div class="status-badge ${statusClass}">${statusText}</div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="info-row">
+                        <span class="info-label">Hari</span>
+                        <span class="info-value">${pasaran.hari}</span>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-label">Buka</span>
+                        <span class="info-value time-value">
+                            <i class="fas fa-door-open"></i> ${pasaran.buka}
+                        </span>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-label">Tutup</span>
+                        <span class="info-value time-value">
+                            <i class="fas fa-door-closed"></i> ${pasaran.tutup}
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="live-draw-section">
+                    <div class="live-draw-label">
+                        <span><i class="fas fa-satellite-dish"></i> LIVE DRAW</span>
+                        <span class="info-label">${statusText}</span>
+                    </div>
+                    <button class="live-draw-btn ${!isOpen ? 'disabled' : ''}" 
+                            onclick="openLiveDraw('${pasaran.nama}', '${pasaran.liveDraw}', ${isOpen})">
+                        <i class="fas fa-external-link-alt"></i>
+                        ${isOpen ? 'BUKA LIVE' : isSoon ? 'SEGERA' : 'TUTUP'}
+                    </button>
+                </div>
+            `;
+            
+            return card;
+        }
 
-<tr>
-    <td>SINGAPORE POOLS</td>
-    <td>SELASA JUMAT LIBUR</td>
-    <td>17:20 (WIB)</td>
-    <td>17:40 (WIB)</td>
-    <td><a href="https://www.singaporepools.com.sg/landing/en/Pages/index.html/">Klik Disini</a></td>
-</tr>
+        // Search handler
+        function handleSearch() {
+            currentSearch = searchInput.value.toLowerCase().trim();
+            
+            // Show/hide clear button
+            clearBtn.style.display = currentSearch.length > 0 ? 'block' : 'none';
+            
+            applyFilters();
+        }
 
-<tr>
-    <td>MONACO POOLS</td>
-    <td>Senin s/d Minggu</td>
-    <td>18:50 (WIB)</td>
-    <td>19:00 (WIB)</td>
-    <td><a href="https://monacopools.co/">Klik Disini</a></td>
-</tr>
+        // Apply filters and sort
+        function applyFilters() {
+            let filtered = [...pasaranData];
+            
+            // Apply search filter
+            if (currentSearch.length > 0) {
+                filtered = filtered.filter(pasaran => 
+                    pasaran.nama.toLowerCase().includes(currentSearch) ||
+                    pasaran.hari.toLowerCase().includes(currentSearch)
+                );
+            }
+            
+            // Apply status filter
+            if (currentFilter !== 'all') {
+                filtered = filtered.filter(pasaran => 
+                    getCurrentStatus(pasaran) === currentFilter
+                );
+            }
+            
+            // Apply sort
+            filtered = sortData(filtered, currentSort);
+            
+            renderCards(filtered);
+        }
 
-<tr>
-    <td>TOTO MACAU 19:00</td>
-    <td>Senin s/d Minggu</td>
-    <td>18:50 (WIB)</td>
-    <td>19:00 (WIB)</td>
-    <td><a href="https://kick.com/totomacau-4d/">Klik Disini</a></td>
-</tr>
+        // Sort data based on selected option
+        function sortData(data, sortType) {
+            const sorted = [...data];
+            
+            switch(sortType) {
+                case 'jam-buka-asc':
+                    return sorted.sort((a, b) => {
+                        return convertToMinutes(a.buka) - convertToMinutes(b.buka);
+                    });
+                    
+                case 'jam-buka-desc':
+                    return sorted.sort((a, b) => {
+                        return convertToMinutes(b.buka) - convertToMinutes(a.buka);
+                    });
+                    
+                case 'nama-asc':
+                    return sorted.sort((a, b) => {
+                        return a.nama.localeCompare(b.nama);
+                    });
+                    
+                case 'nama-desc':
+                    return sorted.sort((a, b) => {
+                        return b.nama.localeCompare(a.nama);
+                    });
+                    
+                case 'default':
+                default:
+                    return sorted.sort((a, b) => a.id - b.id);
+            }
+        }
 
-<tr>
-    <td>TAIWAN POOLS</td>
-    <td>Senin s/d Minggu</td>
-    <td>20:30 (WIB)</td>
-    <td>20:45 (WIB)</td>
-    <td><a href="https://www.taiwan-lotto.com/">Klik Disini</a></td>
-</tr>
+        // Get current status based on time - PERBAIKAN LOGIKA JAM
+        function getCurrentStatus(pasaran) {
+            const now = new Date();
+            const currentTime = now.getHours() * 60 + now.getMinutes();
+            const openTime = convertToMinutes(pasaran.buka);
+            const closeTime = convertToMinutes(pasaran.tutup);
+            
+            // Jika buka lebih kecil dari tutup (normal schedule)
+            if (openTime < closeTime) {
+                if (currentTime >= openTime && currentTime < closeTime) {
+                    return 'open';
+                } else if (currentTime < openTime) {
+                    // Check if opening soon (within 30 minutes)
+                    const timeToOpen = openTime - currentTime;
+                    return timeToOpen <= 30 && timeToOpen > 0 ? 'soon' : 'closed';
+                } else {
+                    return 'closed';
+                }
+            } 
+            // Jika buka lebih besar dari tutup (overnight schedule)
+            else {
+                if (currentTime >= openTime || currentTime < closeTime) {
+                    return 'open';
+                } else {
+                    // Check if opening soon (within 30 minutes)
+                    const timeToOpen = openTime - currentTime;
+                    return timeToOpen <= 30 && timeToOpen > 0 ? 'soon' : 'closed';
+                }
+            }
+        }
 
-<tr>
-    <td>TOTO MACAU 5D 21:00</td>
-    <td>Senin s/d Minggu</td>
-    <td>20:50 (WIB)</td>
-    <td>21:00 (WIB)</td>
-    <td><a href="https://www.kick.com/studio-live-game">Klik Disini</a></td>
-</tr>
+        // Update all statuses
+        function updateAllStatuses() {
+            if (jadwalContainer.children.length > 0) {
+                applyFilters();
+            }
+        }
 
-<tr>
-    <td>TOTO MACAU 22:00</td>
-    <td>Senin s/d Minggu</td>
-    <td>21:50 (WIB)</td>
-    <td>22:00 (WIB)</td>
-    <td><a href="https://kick.com/totomacau-4d/">Klik Disini</a></td>
-</tr>
+        // Open live draw link
+        function openLiveDraw(nama, url, isOpen) {
+            if (!isOpen) {
+                showNotification(`${nama} belum buka atau sudah tutup`, 'warning');
+                return;
+            }
+            
+            // Show confirmation
+            if (confirm(`Buka Live Draw ${nama} di browser?\n${url}`)) {
+                window.open(url, '_blank');
+            }
+        }
 
-<tr>
-    <td>HONGKONG POOLS</td>
-    <td>Senin s/d Minggu</td>
-    <td>23:00 (WIB)</td>
-    <td>23:15 (WIB)</td>
-    <td><a href="http://hongkonglotto.com//">Klik Disini</a></td>
-</tr>
+        // Update statistics
+        function updateStats() {
+            const openMarkets = displayData.filter(p => getCurrentStatus(p) === 'open').length;
+            const totalMarkets = displayData.length;
+            
+            openCount.textContent = openMarkets;
+            totalCount.textContent = totalMarkets;
+        }
 
-<tr>
-    <td>TOTO MACAU 23:00</td>
-    <td>Senin s/d Minggu</td>
-    <td>22:50 (WIB)</td>
-    <td>23:00 (WIB)</td>
-    <td><a href="https://kick.com/totomacau-4d/">Klik Disini</a></td>
-</tr>
+        // Helper functions
+        function getStatusText(status) {
+            const statusMap = {
+                'open': 'BUKA',
+                'closed': 'TUTUP',
+                'soon': 'SEGERA'
+            };
+            return statusMap[status] || status;
+        }
 
-<tr>
-    <td>KING KONG 4D 23:00</td>
-    <td>Senin s/d Minggu</td>
-    <td>22:50 (WIB)</td>
-    <td>23:00 (WIB)</td>
-    <td><a href="https://www.kingkongpools.com/">Klik Disini</a></td>
-</tr>
-</table>
-<div class="divider"></div>
+        function convertToMinutes(timeStr) {
+            const [hours, minutes] = timeStr.split(':').map(Number);
+            return hours * 60 + minutes;
+        }
+
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'warning' ? 'exclamation-triangle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            // Add styles for notification
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: ${type === 'warning' ? '#FF9800' : '#4CAF50'};
+                color: white;
+                padding: 12px 16px;
+                border-radius: 8px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                z-index: 1000;
+                animation: slideIn 0.3s ease;
+                font-size: 0.9rem;
+                max-width: 90%;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+    </script>
 </body>
 </html>
