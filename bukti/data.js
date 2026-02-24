@@ -3,9 +3,17 @@ const items = [
     
     
     {
+        img: '/bukti/img/2026-02-24.webp',
+        title: 'Gates of Olympus Super Scatter',
+        table: [['Tanggal', '24-02-2026'], ['Modal', 'Rp 1.500.000'], ['WD', 'Rp 20.000.000']]
+    },{
+        img: '/bukti/img/2026-02-23.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '23-02-2026'], ['Modal', 'Rp 80.000'], ['WD', 'Rp 11.000.000']]
+    },{
         img: '/bukti/img/2026-02-20.1.webp',
         title: 'Gates of Olympus 1000',
-        table: [['Tanggal', '15-02-2026'], ['Modal', 'Rp 180.000'], ['WD', 'Rp 9.600.000']]
+        table: [['Tanggal', '20-02-2026'], ['Modal', 'Rp 180.000'], ['WD', 'Rp 9.600.000']]
     },{
         img: '/bukti/img/2026-02-20.webp',
         title: 'Fortune of Olympus',
@@ -758,6 +766,7 @@ const items = [
     },
     
 ];
+
 
 
 
