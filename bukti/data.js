@@ -3,6 +3,11 @@ const items = [
     
     
     {
+        img: '/bukti/img/2026-16-03.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '16-03-2026'], ['Modal', 'Rp 200.000'], ['WD', 'Rp 28.700.000']]
+    },
+    {
         img: '/bukti/img/2026-15-03.webp',
         title: 'Sweet Bonanza',
         table: [['Tanggal', '15-03-2026'], ['Modal', 'Rp 500.000'], ['WD', 'Rp 38.200.000']]
