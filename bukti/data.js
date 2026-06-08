@@ -1149,16 +1149,6 @@ const items = [
         title: 'SINGAPORE',
         table: [['Tanggal', '10-03-2024'], ['Modal', 'Rp 20.000'], ['WD', 'Rp 13.000.000']]
     },
-    {
-        img: '/bukti/img/tgl7bln3.webp',
-        title: 'Starlight Princess',
-        table: [['Tanggal', '07-03-2024'], ['Modal', 'Rp 50.000'], ['WD', 'Rp 3.000.000']]
-    },
-    {
-        img: '/bukti/img/tgl10bln1.webp',
-        title: 'Olympus 1000',
-        table: [['Tanggal', '10-01-2024'], ['Modal', 'Rp 40.000'], ['WD', 'Rp 3.000.000']]
-    },
     
 ];
 
