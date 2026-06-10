@@ -1139,21 +1139,6 @@ const items = [
         title: 'Gates of Olympus 1000',
         table: [['Tanggal', '01-04-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 5.950.000']]
     },
-    {
-        img: '/bukti/img/tgl19bln3.webp',
-        title: 'Sugar Rush 1000',
-        table: [['Tanggal', '19-03-2024'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 7.500.000']]
-    },
-    {
-        img: '/bukti/img/tgl11bln3.webp',
-        title: 'Gates of Olympus',
-        table: [['Tanggal', '11-03-2024'], ['Modal', 'Rp 70.000'], ['WD', 'Rp 5.550.000']]
-    },
-    {
-        img: '/bukti/img/tgl10bln3.webp',
-        title: 'SINGAPORE',
-        table: [['Tanggal', '10-03-2024'], ['Modal', 'Rp 20.000'], ['WD', 'Rp 13.000.000']]
-    },
     
 ];
 
