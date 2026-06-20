@@ -2,6 +2,11 @@ const items = [
 
     
     {
+        img: '/bukti/img/21-06-2026.webp',
+        title: 'Sweet Bonanza 1000 Dice',
+        table: [['Tanggal', '21-06-2026'], ['Modal', 'Rp 200.000'], ['WD', 'Rp 16.000.000']]
+    },
+    {
         img: '/bukti/img/20-06-2026.webp',
         title: 'Starlight Princess 1000',
         table: [['Tanggal', '20-06-2026'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 14.000.000']]
