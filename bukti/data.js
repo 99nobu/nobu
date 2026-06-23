@@ -2,7 +2,7 @@ const items = [
 
     
     {
-        img: '/bukti/img/22-06-26.webp',
+        img: '/bukti/img/26-06-26.webp',
         title: 'Sugar Rush 1000',
         table: [['Tanggal', '22-06-2026'], ['Modal', 'Rp 200.000'], ['WD', 'Rp 20.000.000']]
     },
