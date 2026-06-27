@@ -2,6 +2,16 @@ const items = [
 
     
     {
+        img: '/bukti/img/28.06.2026.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '28-06-2026'], ['Modal', 'Rp 200.000'], ['WD', 'Rp 15.000.000']]
+    },
+    {
+        img: '/bukti/img/28-06-2026.webp',
+        title: 'Mahjong Wins 3 - Black Scatter',
+        table: [['Tanggal', '28-06-2026'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 10.344.000']]
+    },
+    {
         img: '/bukti/img/26062026.webp',
         title: 'Gates of Olympus 1000',
         table: [['Tanggal', '26-06-2026'], ['Modal', 'Rp 125.000'], ['WD', 'Rp 11.000.000']]
