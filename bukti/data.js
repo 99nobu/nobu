@@ -2,6 +2,21 @@ const items = [
 
     
     {
+        img: '/bukti/img/17-07-2026.webp',
+        title: 'Gates of Gatot Kaca Super Scatter',
+        table: [['Tanggal', '17-07-2026'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 10.000.000']]
+    },
+    {
+        img: '/bukti/img/17.07.2026.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '17-07-2026'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 10.026.000']]
+    },
+    {
+        img: '/bukti/img/16-07-2026.webp',
+        title: 'Gates of Olympus Super Scatter',
+        table: [['Tanggal', '16-07-2026'], ['Modal', 'Rp 350.000'], ['WD', 'Rp 17.000.000']]
+    },
+    {
         img: '/bukti/img/15-07-2026.webp',
         title: 'Gates of Olympus Super Scatter',
         table: [['Tanggal', '15-07-2026'], ['Modal', 'Rp 150.000'], ['WD', 'Rp 10.450.000']]
