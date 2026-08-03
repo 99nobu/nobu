@@ -2,6 +2,21 @@ const items = [
 
     
     {
+        img: '/bukti/img/04-08-2026.webp',
+        title: 'Gates of Olympus Super Scatter',
+        table: [['Tanggal', '04-08-2026'], ['Modal', 'Rp 98.500'], ['WD', 'Rp 10.518.000']]
+    },
+    {
+        img: '/bukti/img/03-08-2026.webp',
+        title: 'Gates of Olympus Super Scatter',
+        table: [['Tanggal', '03-08-2026'], ['Modal', 'Rp 212.000'], ['WD', 'Rp 20.500.000']]
+    },
+    {
+        img: '/bukti/img/03.08.2026.webp',
+        title: 'Sweet Bonanza 1000',
+        table: [['Tanggal', '03-08-2026'], ['Modal', 'Rp 150.000'], ['WD', 'Rp 11.640.000']]
+    },
+    {
         img: '/bukti/img/01.08.2026.webp',
         title: 'Starlight Princess Super Scatter',
         table: [['Tanggal', '01-08-2026'], ['Modal', 'Rp 200.000'], ['WD', 'Rp 10.000.000']]
