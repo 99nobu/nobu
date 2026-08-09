@@ -3,6 +3,16 @@ const items = [
     
     
     {
+        img: '/bukti/img/10-08-2026.webp',
+        title: 'Sweet Bonanza 1000 Dice',
+        table: [['Tanggal', '10-08-2026'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 11.000.000']]
+    },
+    {
+        img: '/bukti/img/09-08-2026.webp',
+        title: 'Gates of Gatot Kaca 1000',
+        table: [['Tanggal', '09-08-2026'], ['Modal', 'Rp 150.000'], ['WD', 'Rp 14.500.000']]
+    },
+    {
         img: '/bukti/img/08082026.webp',
         title: 'Mahjong Wins 3 - Black Scatter',
         table: [['Tanggal', '08-08-2026'], ['Modal', 'Rp 65.000'], ['WD', 'Rp 11.500.000']]
