@@ -3,6 +3,16 @@ const items = [
     
     
     {
+        img: '/bukti/img/10082026.webp',
+        title: 'Gates of Olympus 1000',
+        table: [['Tanggal', '10-08-2026'], ['Modal', 'Rp 1.000.000'], ['WD', 'Rp 30.000.000']]
+    },
+    {
+        img: '/bukti/img/10.08.2026.webp',
+        title: 'Sweet Bonanza 1000',
+        table: [['Tanggal', '10-08-2026'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 10.000.000']]
+    },
+    {
         img: '/bukti/img/10-08-2026.webp',
         title: 'Sweet Bonanza 1000 Dice',
         table: [['Tanggal', '10-08-2026'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 11.000.000']]
