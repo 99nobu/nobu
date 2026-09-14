@@ -3,6 +3,11 @@ const items = [
     
     
     {
+        img: '/bukti/img/15-09-2026.webp',
+        title: 'Mahjong Wins 2',
+        table: [['Tanggal', '15-09-2026'], ['Modal', 'Rp 200.000'], ['WD', 'Rp 16.000.000']]
+    },
+    {
         img: '/bukti/img/14-09.2026.webp',
         title: 'Mahjong Wins 2',
         table: [['Tanggal', '14-09-2026'], ['Modal', 'Rp 100.000'], ['WD', 'Rp 14.500.000']]
