@@ -8,8 +8,8 @@ const items = [
         table: [['Tanggal', '02-11-2026'], ['Modal', 'Rp 120.000'], ['WD', 'Rp 13.085.000']]
     },
     {
-        img: '/bukti/img/02-11-26nn.webp',
-        title: 'Gates of Olympus',
+        img: '/bukti/img/02-11-26nn26.webp',
+        title: ' Gates of Olympus ',
         table: [['Tanggal', '02-11-2026'], ['Modal', 'Rp 150.000'], ['WD', 'Rp 10.000.000']]
     },
     {
